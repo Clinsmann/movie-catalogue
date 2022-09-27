@@ -1,13 +1,125 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #363c49;
+  font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  background-color: #ebf1f8;
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.poster {
+  max-width: 400px;
+  height: auto;
+  width: 100%;
+}
+
+.movie-title {
+  margin: 16px 0 0px;
+  font-weight: 700;
+}
+
+.details {
+  padding: 8px 0;
+}
+
+.rating {
+  .rating-title {
+    font-weight: 400;
+    margin: 0;
+    padding: 10px 0 5px;
+  }
+  .rating-item {
+    justify-content: space-between;
+    padding: 5px 0;
+    display: flex;
+  }
+}
+
+.plot {
+  padding: 10px 0;
+  line-height: 1.75;
+}
+
+.caption {
+  justify-content: space-between;
+  padding: 5px 0;
+  display: flex;
+  .title {
+    font-weight: 400;
+  }
+}
+
+.button {
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  padding: 16px 32px;
+  text-decoration: unset;
+  text-align: center;
+  background-color: #d52026;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &:hover {
+    background-color: rgb(195, 41, 46);
+  }
+}
+
+.app-container {
+  max-width: 400px;
+  margin: 0 16px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.pagination {
+  padding: 0 16px 20px;
+  overflow-x: overlay;
+  .rc-pagination {
+    gap: 1rem;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    list-style: none;
+  }
+
+  .rc-pagination-prev button:after {
+    content: "‹";
+    display: block;
+  }
+
+  .rc-pagination-next button:after {
+    content: "›";
+    display: block;
+  }
+
+  .rc-pagination-jump-next {
+    outline: 0;
+
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #666;
+    }
+
+    button:after {
+      display: block;
+      content: "•••";
+    }
+  }
 }
