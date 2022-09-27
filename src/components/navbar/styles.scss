@@ -1,0 +1,14 @@
+.nav-bar {
+  display: flex;
+  background-color: white;
+  padding: 20px 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .back-icon {
+    margin-right: 10px;
+    height: 14px;
+  }
+}
