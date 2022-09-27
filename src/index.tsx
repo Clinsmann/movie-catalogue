@@ -1,14 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import "./index.scss";
+import Movie from "./pages/movie";
+import Movies from "./pages/movies";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <div>App is up and running</div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:id" element={<Movie />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
