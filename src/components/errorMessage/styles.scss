@@ -1,0 +1,14 @@
+.error-message {
+  margin-bottom: 20px;
+  width: 100%;
+
+  .container {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px 16px;
+  }
+
+  .message {
+    margin-top: 10px;
+  }
+}

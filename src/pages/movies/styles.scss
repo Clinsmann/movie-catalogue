@@ -1,0 +1,51 @@
+.movies-container {
+  margin: 0 16px;
+
+  .search-input {
+    width: -webkit-fill-available;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding: 15px 15px;
+    font-size: 1rem;
+    border: 1px solid #dcdcdc;
+
+    &:active,
+    &:hover {
+      outline: none;
+      border: 1px solid #adadad;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+
+  .search-result-title {
+    margin: 15px 0;
+    font-weight: 300;
+    display: flex;
+  }
+}
+
+.movie-list {
+  margin: 15px 0;
+
+  a.list-item {
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #363c49;
+    display: flex;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+    img {
+      height: 80px;
+      display: flex;
+      margin-right: 15px;
+    }
+
+    .title,
+    .year {
+      padding-bottom: 10px;
+    }
+  }
+}
