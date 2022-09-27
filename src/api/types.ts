@@ -1,6 +1,4 @@
-import axios, { AxiosResponse } from "axios";
-
-interface MoviePoster {
+export interface MoviePoster {
   Title: string;
   Year: string;
   imdbID: string;
@@ -8,12 +6,12 @@ interface MoviePoster {
   Poster: string;
 }
 
-interface Rating {
+export interface Rating {
   Source: string;
   Value: string;
 }
 
-interface MovieDetailsResponse {
+export interface MovieDetailsResponse {
   Title?: string;
   Year?: string;
   Rated?: string;
@@ -42,30 +40,9 @@ interface MovieDetailsResponse {
   Error?: string;
 }
 
-interface MoviesPosterResponse {
+export interface MoviesPosterResponse {
   Search?: MoviePoster[];
   totalResults?: string;
   Response: string;
   Error?: string;
 }
-
-// These will go into the .env file But totally fine for the purpose of this test
-const OMDB_API = "https://www.omdbapi.com";
-const API_KEY = "42dd2f07";
-
-export const getMoviesPoster = (
-  title: string,
-  page: number
-): Promise<AxiosResponse<MoviesPosterResponse>> => {
-  return axios.get(OMDB_API, {
-    params: { apikey: API_KEY, page, s: title },
-  });
-};
-
-export const getMovieDetails = (
-  imdbID: string
-): Promise<AxiosResponse<MovieDetailsResponse>> => {
-  return axios.get(OMDB_API, {
-    params: { apikey: API_KEY, i: imdbID },
-  });
-};
