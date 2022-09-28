@@ -88,6 +88,8 @@ body {
 
 
 .pagination {
+  margin: 0 auto;
+  max-width: 400px;
   padding: 0 16px 20px;
   overflow-x: overlay;
   .rc-pagination {
