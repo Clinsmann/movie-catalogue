@@ -1,5 +1,7 @@
 .movies-container {
-  margin: 0 16px;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 400px;
 
   .search-input {
     width: -webkit-fill-available;

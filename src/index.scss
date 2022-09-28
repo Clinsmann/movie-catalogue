@@ -77,8 +77,9 @@ body {
 }
 
 .app-container {
+  margin: 0 auto;
+  padding: 0 16px;
   max-width: 400px;
-  margin: 0 16px 16px;
   position: relative;
   display: flex;
   flex-direction: column;
